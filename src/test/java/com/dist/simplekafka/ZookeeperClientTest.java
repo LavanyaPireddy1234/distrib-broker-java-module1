@@ -29,7 +29,9 @@ public class ZookeeperClientTest extends ZookeeperTestHarness {
 
         zookeeperClient.registerBroker(new Broker(1, "10.10.10.10", 8000));
 
-        TestUtils.waitUntilTrue(()->{
+        // assignment: subscribe to broker change listener
+
+        TestUtils.waitUntilTrue(() -> {
             return brokerIds.size() == 1;
         }, "Waiting for getting broker added notification");
 
