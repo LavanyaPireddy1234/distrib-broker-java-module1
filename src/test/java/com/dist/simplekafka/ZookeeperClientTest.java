@@ -14,7 +14,7 @@ import static junit.framework.Assert.assertTrue;
 //Assignment4 - Implement BrokerChangeListener.
 
 public class ZookeeperClientTest extends ZookeeperTestHarness {
-
+    //start testcontainer with zookeeper
     @Test
     public void registersBroker() {
         Broker broker = new Broker(1, "10.10.10.10", 8000);
@@ -26,6 +26,14 @@ public class ZookeeperClientTest extends ZookeeperTestHarness {
     @Test
     public void testSubscribeBrokerChangeListener() {
         List<String> brokerIds = new ArrayList<>();
+        //TODO: implement IZkChildListener interface
+//        zookeeperClient.subscribeBrokerChangeListener(new IZkChildListener() {
+//            @Override
+//            public void handleChildChange(String parentPath, List<String> currentChildren) throws Exception {
+//                brokerIds.clear();
+//                brokerIds.addAll(currentChildren);
+//            }
+//        });
 
         zookeeperClient.registerBroker(new Broker(1, "10.10.10.10", 8000));
 
