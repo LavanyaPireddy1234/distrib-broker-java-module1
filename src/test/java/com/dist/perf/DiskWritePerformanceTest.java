@@ -69,7 +69,7 @@ public class DiskWritePerformanceTest {
     }
 
     private static void syncToPhysicalMedia(FileOutputStream os) throws IOException {
-        os.getFD().sync();
+//        os.getFD().sync(); //Why??
     }
 
     private static void printMetrics(PerformanceMetrics metrics) {
