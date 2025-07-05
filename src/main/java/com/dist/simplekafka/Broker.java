@@ -2,12 +2,12 @@ package com.dist.simplekafka;
 
 import java.util.Objects;
 
-final class Broker {
+public final class Broker {
     private final int id;
     private final String host; //key=value;
     private final int port;
 
-    Broker(int id, String host, int port) {
+    public Broker(int id, String host, int port) {
         this.id = id;
         this.host = host;
         this.port = port;
